@@ -8,4 +8,5 @@
 # Whitelist
 !godot/**
 !nvim/**
+!hypr/**
 
