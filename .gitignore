@@ -1,0 +1,9 @@
+# https://www.howtogeek.com/devops/how-to-set-up-gitignore-as-a-whitelist/
+*
+!*/
+
+# track this file
+!.gitignore
+
+# Whitelist
+
