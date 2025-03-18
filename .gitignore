@@ -6,4 +6,6 @@
 !.gitignore
 
 # Whitelist
+!godot/**
+!nvim/**
 
