@@ -6,10 +6,10 @@
 !.gitignore
 
 # Whitelist
-!godot/**
-!nvim/**
-!hypr/**
-!kitty/**
-!tofi/**
-!mako/**
+!.config/godot/**
+!.config/nvim/**
+!.config/hypr/**
+!.config/kitty/**
+!.config/tofi/**
+!.config/mako/**
 
