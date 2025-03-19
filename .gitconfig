@@ -1,0 +1,19 @@
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[user]
+	email = codekai16@gmail.com
+	name = Fireye
+[core]
+	editor = nvim
+[includeIf "gitdir:~/Work/"]
+    path = .gitconfig-work
+[init]
+	defaultBranch = main
+[http]
+	version = HTTP/2
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit

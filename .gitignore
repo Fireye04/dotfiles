@@ -2,11 +2,16 @@
 # https://a64.in/git-do-not-ignore/
 /*
 
-# track this file
+# Whitelist files
 !.gitignore
 !README.md
+!.gitconfig
+!.gitconfig-work
+!.p10k.zsh
+!.zshrc
 
-# Whitelist
+# Whitelist folders
+
 .config/*
 !.config/
 .config/nvim/*
