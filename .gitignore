@@ -1,15 +1,32 @@
 # https://www.howtogeek.com/devops/how-to-set-up-gitignore-as-a-whitelist/
-*
-!*/
+# https://a64.in/git-do-not-ignore/
+/*
 
 # track this file
 !.gitignore
+!README.md
 
 # Whitelist
-!.config/godot/**
+.config/*
+!.config/
+.config/nvim/*
+.config/hypr/*
+.config/tofi/*
+.config/mako/*
+.config/cava/*
+.config/godot/*
+!.config/nvim/
 !.config/nvim/**
+!.config/hypr/
 !.config/hypr/**
-!.config/kitty/**
+.config/kitty/*
+!.config/tofi/
 !.config/tofi/**
+!.config/mako/
 !.config/mako/**
-
+!.config/cava/
+!.config/cava/**
+!.config/godot/
+!.config/godot/**
+!.config/kitty/
+!.config/kitty/**
