@@ -80,7 +80,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git archlinux zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git archlinux zsh-autosuggestions zsh-syntax-highlighting autojump)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -114,17 +114,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias server-ssh='ssh remote@192.168.0.52'
+alias godot="~/Files/Godot/Godot_v4.4-stable_mono_linux_x86_64/Godot_v4.4-stable_mono_linux.x86_64"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# Install Ruby Gems to ~/gems
-export GEM_HOME="$HOME/gems"
-export PATH="$HOME/gems/bin:$PATH"
-export PATH="$PATH:/home/fireye/.local/share/gem/ruby/3.3.0/bin"
-
-mcd ()
-{
-    mkdir -p -- "$1" &&
-       cd -P -- "$1"
-}
