@@ -15,16 +15,17 @@
 .config/*
 !.config/
 .config/nvim/*
+.config/niri/*
 .config/hypr/*
 .config/tofi/*
 .config/mako/*
 .config/cava/*
 .config/godot/*
+.config/kitty/*
 !.config/nvim/
 !.config/nvim/**
 !.config/hypr/
 !.config/hypr/**
-.config/kitty/*
 !.config/tofi/
 !.config/tofi/**
 !.config/mako/
@@ -35,3 +36,5 @@
 !.config/godot/**
 !.config/kitty/
 !.config/kitty/**
+!.config/niri/
+!.config/niri/**
