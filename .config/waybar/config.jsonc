@@ -1,0 +1,97 @@
+[{
+	"name": "dom",
+	"layer": "top",
+	"position": "right",
+	"reload_style_on_change": true,
+	"modules-left": ["clock", "pulseaudio", "battery", "custom/down1"],
+	"modules-center": ["custom/up2", "niri/workspaces", "custom/down2"],
+	"modules-right": ["custom/up1","custom/power", "tray"],
+	"custom/power": {
+		"return-type":"json",
+		// ONCE PATCH IS PUSHED CAN BE CHANGED TO ONCE
+		"interval":1,
+		"format": "{}",
+		"exec-on-event":true,
+		"exec": "~/.config/waybar/bin/tuned/display.sh",
+		"on-click":"~/.config/waybar/bin/tuned/change.sh",
+		"justify":"center"
+	},
+	
+	"network": {
+		"justify":"center",
+        "format": "{icon}",
+        "format-wifi": "{icon}",
+        "format-ethernet": "󰊗",
+        "format-disconnected": "{icon}", 
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "tooltip-format-wifi": "{essid} at {signalStrength}% Strength",
+        "tooltip-format-ethernet": "{ifname} {ipaddr}/{cidr} ",
+        "tooltip-format-disconnected": "Disconnected",
+        "format-icons": {
+            "wifi":["󰤯", "󰤟","󰤢", "󰤥", "󰤨"],
+	    "disconnected":"󰤭"
+        },
+        "max-length": 50,
+	"on-click": "kitty nmtui"
+	},
+	"pulseaudio": {
+	    "format": "{volume}\n{icon}",
+	    "format-bluetooth": "{volume}\n{icon} ",
+	    "format-muted": "{volume}\n",
+	    "format-icons": {
+		"headphone": "",
+		"hands-free": "",
+		"headset": "",
+		"phone": "",
+		"phone-muted": "",
+		"portable": "",
+		"car": "",
+		"default": ["","","","", ""]
+	    },
+		"justify":"center",
+	    "scroll-step": 1,
+		"reverse-scrolling":true,
+	    "on-click": "blueman-manager",
+	    "on-click-right": "pwvucontrol" ,
+	    "ignored-sinks": ["Easy Effects Sink"]
+	},
+	"battery": {
+	    "interval":5,
+	    "states": {
+		"warning": 30,
+		"critical": 15
+	    },
+		"justify":"center",
+	    "format": "{capacity}\n{icon}",
+	    "format-icons": ["", "", "", "", ""],
+	    "format-charging": "{capacity}\n",
+		"on-click":"kitty sudo powertop"
+	},
+    "clock": {
+	    "format":"{:%I\n%M\n%p}",
+		"justify":"center",
+		"format-alt": "{:%a\n%d\n%b\n%I\n%M\n%p}",
+		"tooltip-format": "{:%a, %d. %b %I:%M %p}",
+	    "on-click-right": "zen-browser https://calendar.google.com/calendar/u/0/r"
+	},
+	"tray": {
+		"icon-size": 20,
+		"spacing": 10
+    },
+	"custom/up1": {
+		"format":"◢◣",
+	"tooltip": false
+	},
+	"custom/down1": {
+		"format":"◥◤",
+	"tooltip": false
+	},
+	"custom/up2": {
+		"format":"◢◣",
+	"tooltip": false
+	},
+	"custom/down2": {
+		"format":"◥◤",
+	"tooltip": false
+	}
+}]
