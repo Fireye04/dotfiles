@@ -114,7 +114,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias server-ssh='ssh remote@192.168.0.52'
-alias godot="~/Files/Godot/Godot_v4.4-stable_mono_linux_x86_64/Godot_v4.4-stable_mono_linux.x86_64"
+alias godot="~/Files/Godot/Godot_v4.4.1-stable_mono_linux_x86_64/Godot_v4.4.1-stable_mono_linux.x86_64"
+alias godot-beta="~/Files/Godot/Godot_v4.5-beta1_mono_linux_x86_64/Godot_v4.5-beta1_mono_linux.x86_64"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

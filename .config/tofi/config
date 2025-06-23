@@ -13,10 +13,10 @@
 	# characters not in the chosen font will fail to render.
 	#
 	# Otherwise, fonts are interpreted in Pango format.
-	font = "Sans"
+	font = "/usr/share/fonts/noto/NotoSansMono-Regular.ttf"
 
 	# Point size of text.
-	font-size = 16
+	font-size = 49
 
 	# Comma separated list of OpenType font feature settings to apply,
 	# if supported by the chosen font. The format is similar to the CSS
@@ -167,8 +167,8 @@
 ### Window theming
 #
 	# Width and height of the window. Can be pixels or a percentage.
-	width = 420
-	height = 320
+	width = 50%
+	height = 50%
 
 	# Window background color
 	background-color = #1B1D1E
@@ -189,10 +189,10 @@
 	corner-radius = 5
 
 	# Padding between borders and text. Can be pixels or a percentage.
-	padding-top = 8
-	padding-bottom = 8
-	padding-left = 8
-	padding-right = 8
+	padding-top = 0
+	padding-bottom = 0
+	padding-left = 0
+	padding-right = 0
 
 	# Whether to clip text drawing to be within the specified padding. This
 	# is mostly important for allowing text to be inset from the border,
@@ -200,7 +200,7 @@
 	clip-to-padding = true
 
 	# Whether to scale the window by the output's scale factor.
-	scale = true
+	scale = false
 
 #
 ### Window positioning

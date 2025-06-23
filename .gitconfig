@@ -7,6 +7,7 @@
 [user]
 	email = codekai16@gmail.com
 	name = Fireye
+	signingkey = 5DE2388216B6D5F3
 [core]
 	editor = nvim
 [includeIf "gitdir:~/Work/"]
@@ -17,3 +18,5 @@
 	version = HTTP/2
 [alias]
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[commit]
+	gpgSign = false
