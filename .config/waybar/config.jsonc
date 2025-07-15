@@ -3,10 +3,16 @@
 		"name": "dom",
 		"layer": "top",
 		"position": "right",
-		"reload_style_on_change": true,
-		"modules-left": ["clock", "pulseaudio", "battery", "custom/down1"],
+		"modules-left": ["battery", "wireplumber", "clock", "custom/down1"],
 		"modules-center": ["custom/up2", "niri/workspaces", "custom/down2"],
-		"modules-right": ["custom/up1", "custom/power", "tray"],
+		"modules-right": [
+			"custom/up1",
+			// "gamemode",
+			"custom/power",
+			"backlight",
+			"cpu",
+			"tray",
+		],
 		"custom/power": {
 			"return-type": "json",
 			// ONCE PATCH IS PUSHED CAN BE CHANGED TO ONCE
@@ -35,8 +41,9 @@
 			"max-length": 50,
 			"on-click": "kitty nmtui",
 		},
-		"pulseaudio": {
-			"format": "{volume}\n{icon}",
+		"wireplumber": {
+			"format": "{volume}%\n{icon}",
+			// NOT YET ADDED
 			"format-bluetooth": "{volume}\n{icon} ",
 			"format-muted": "{volume}\n",
 			"format-icons": {
@@ -54,7 +61,7 @@
 			"reverse-scrolling": true,
 			"on-click": "bluetoothctl connect 80:99:E7:1D:46:E5",
 			"on-click-right": "pwvucontrol",
-			"ignored-sinks": ["Easy Effects Sink"],
+			"on-click-middle": "helvum",
 		},
 		"battery": {
 			"interval": 5,
@@ -63,9 +70,9 @@
 				"critical": 15,
 			},
 			"justify": "center",
-			"format": "{capacity}\n{icon}",
+			"format": "{capacity}%\n{icon}",
 			"format-icons": ["", "", "", "", ""],
-			"format-charging": "{capacity}\n",
+			"format-charging": "{capacity}%\n",
 			"on-click": "kitty sudo powertop",
 		},
 		"clock": {
@@ -75,9 +82,30 @@
 			"tooltip-format": "{:%a, %d. %b %I:%M %p}",
 			"on-click-right": "zen-browser https://calendar.google.com/calendar/u/0/r",
 		},
+		"backlight": {
+			"reverse-scrolling": true,
+			"device": "intel_backlight",
+			"format": "{icon}",
+			"format-icons": ["○", "◔", "◑", "◕", "●"],
+		},
+		"gamemode": {
+			"format": "{glyph}",
+			"glyph": "",
+			"justify": "center",
+			"hide-not-running": false,
+			"use-icon": true,
+			"icon-name": "input-gaming-symbolic",
+			"icon-spacing": 0,
+			"icon-size": 20,
+			"tooltip-format": "Games running: {count}",
+		},
 		"tray": {
 			"icon-size": 20,
 			"spacing": 10,
+		},
+		"cpu": {
+			"interval": 10,
+			"format": "{usage}",
 		},
 		"custom/up1": {
 			"format": "◢◣",
