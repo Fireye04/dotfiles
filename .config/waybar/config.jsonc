@@ -57,7 +57,7 @@
 				"default": ["", "", "", "", ""],
 			},
 			"justify": "center",
-			"scroll-step": 1,
+			"scroll-step": 2,
 			"reverse-scrolling": true,
 			"on-click": "bluetoothctl connect 80:99:E7:1D:46:E5",
 			"on-click-right": "pwvucontrol",
@@ -105,7 +105,7 @@
 		},
 		"cpu": {
 			"interval": 10,
-			"format": "{usage}",
+			"format": "{usage} ",
 		},
 		"custom/up1": {
 			"format": "◢◣",
