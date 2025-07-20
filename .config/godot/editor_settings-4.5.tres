@@ -1,4 +1,4 @@
-[gd_resource type="EditorSettings" load_steps=3 format=3]
+[gd_resource type="EditorSettings" load_steps=4 format=3]
 
 [sub_resource type="InputEventKey" id="InputEventKey_37xol"]
 keycode = 4194326
@@ -6,6 +6,12 @@ keycode = 4194326
 [sub_resource type="InputEventKey" id="InputEventKey_l5ni8"]
 physical_keycode = 81
 unicode = 81
+
+[sub_resource type="InputEventKey" id="InputEventKey_cgwmn"]
+command_or_control_autoremap = true
+alt_pressed = true
+keycode = 75
+unicode = 75
 
 [resource]
 interface/editor/save_on_focus_loss = true
@@ -86,6 +92,9 @@ shortcuts = [{
 }, {
 "name": "spatial_editor/tool_select",
 "shortcuts": [SubResource("InputEventKey_l5ni8")]
+}, {
+"name": "editor/clear_output",
+"shortcuts": [SubResource("InputEventKey_cgwmn")]
 }]
 metadata/script_setup_templates_dictionary = {
 "AnimatedSprite2D": "0NodeDefault",

@@ -48,6 +48,7 @@ _project_settings_advanced_mode = true
 _export_template_download_directory = "/home/fireye/.cache/godot"
 _script_setup_templates_dictionary = {}
 _script_setup_use_script_templates = false
+debug_draw_3d/settings/telemetry_state = 1
 shortcuts = [{
 "name": "editor/clear_output",
 "shortcuts": [SubResource("InputEventKey_0s22g")]

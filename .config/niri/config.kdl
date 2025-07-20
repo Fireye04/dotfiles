@@ -276,6 +276,7 @@ gestures {
 // See the binds section below for more spawn examples.
 
 spawn-at-startup "waybar"
+spawn-at-startup "niriusd"
 spawn-at-startup "export" "ELECTRON_OZONE_PLATFORM_HINT=auto"
 spawn-at-startup "systemctl" "--user" "start" "plasma-polkit-agent"
 spawn-at-startup "copyq" "--start-server"
@@ -416,6 +417,7 @@ binds {
     Mod+O repeat=false { toggle-overview; }
 
     Mod+C { close-window; }
+    Mod+Z { spawn "nirius" "focus-or-spawn" "-t" ".*Zen Browser" "zen-browser"; }
 
     Mod+Left  { focus-column-left; }
     Mod+Down  { focus-window-down-or-top; }

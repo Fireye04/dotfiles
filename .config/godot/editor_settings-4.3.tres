@@ -149,6 +149,7 @@ editors/3d_gizmos/gizmo_colors/lightprobe_lines = Color(0.5, 0.6, 1, 1)
 editors/3d_gizmos/gizmo_colors/joint_body_a = Color(0.6, 0.8, 1, 1)
 editors/3d_gizmos/gizmo_colors/joint_body_b = Color(0.6, 0.9, 1, 1)
 editors/3d_gizmos/gizmo_colors/fog_volume = Color(0.5, 0.7, 1, 1)
+debug_draw_3d/settings/telemetry_state = 1
 shortcuts = [{
 "name": "editor/clear_output",
 "shortcuts": [SubResource("InputEventKey_looon")]
