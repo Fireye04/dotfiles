@@ -266,7 +266,7 @@ prefer-no-csd
 
 gestures {
 	hot-corners {
-        off
+		bottom-left
     }
 }
 
@@ -346,6 +346,7 @@ window-rule {
 	max-height 300
 }
 
+
 // Example: block out two password managers from screen capture.
 // (This example rule is commented out with a "/-" in front.)
 /-window-rule {
@@ -419,9 +420,11 @@ binds {
     Mod+C { close-window; }
     Mod+Z { spawn "nirius" "focus-or-spawn" "-t" ".*Zen Browser" "zen-browser"; }
 
+	Mod+P { spawn "nirius" "toggle-follow-mode"; }
+
     Mod+Left  { focus-column-left; }
-    Mod+Down  { focus-window-down-or-top; }
-    Mod+Up    { focus-window-up-or-bottom; }
+    Mod+Down  { focus-window-or-workspace-down; }
+    Mod+Up    { focus-window-or-workspace-up; }
     Mod+Right { focus-column-right; }
     Mod+H     { focus-column-left; }
     // Mod+J     { focus-window-down-or-top; }
